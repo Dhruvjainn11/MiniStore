@@ -22,9 +22,7 @@ const CheckoutPage = () => {
   const [orderPlaced, setOrderPlaced] = useState(false);
 
   const cartItems = useSelector((state) => state.cart.items);
-  const currentUser = useSelector(
-    (state) => state.auth.currentUser
-  );
+  const currentUser = useSelector((state) => state.auth.currentUser);
 
   const {
     register,
@@ -39,12 +37,12 @@ const CheckoutPage = () => {
 
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
-    0
+    0,
   );
 
   const subtotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
-    0
+    0,
   );
 
   const handlePlaceOrder = (data) => {
@@ -61,7 +59,6 @@ const CheckoutPage = () => {
     return (
       <main className="flex min-h-162.5 items-center justify-center bg-linear-to-br from-indigo-50 via-white to-violet-50 px-5 py-16">
         <div className="w-full max-w-lg rounded-3xl border border-indigo-100 bg-white p-8 text-center shadow-xl shadow-indigo-100/50 sm:p-10">
-
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 text-emerald-500">
             <CheckCircle2 size={38} />
           </div>
@@ -71,8 +68,8 @@ const CheckoutPage = () => {
           </h1>
 
           <p className="mx-auto mt-3 max-w-sm text-sm leading-6 text-slate-500">
-            Your demo order has been placed successfully.
-            Thanks for shopping with MiniStore.
+            Your demo order has been placed successfully. Thanks for shopping
+            with MiniStore.
           </p>
 
           <NavLink
@@ -82,7 +79,6 @@ const CheckoutPage = () => {
             <ShoppingBag size={18} />
             Continue Shopping
           </NavLink>
-
         </div>
       </main>
     );
@@ -91,7 +87,6 @@ const CheckoutPage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10 lg:py-14">
-
         <div className="mb-8">
           <NavLink
             to="/cart"
@@ -118,9 +113,7 @@ const CheckoutPage = () => {
           onSubmit={handleSubmit(handlePlaceOrder)}
           className="grid gap-8 lg:grid-cols-[1fr_380px]"
         >
-
           <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-7">
-
             <div className="mb-6 flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
                 <MapPin size={20} />
@@ -138,7 +131,6 @@ const CheckoutPage = () => {
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2">
-
               <InputField
                 label="Full Name"
                 name="name"
@@ -219,7 +211,6 @@ const CheckoutPage = () => {
                   required: "Postal code is required",
                 }}
               />
-
             </div>
 
             <div className="mt-8 border-t border-slate-100 pt-7">
@@ -229,9 +220,7 @@ const CheckoutPage = () => {
                 </div>
 
                 <div>
-                  <h2 className="font-bold text-slate-900">
-                    Payment
-                  </h2>
+                  <h2 className="font-bold text-slate-900">Payment</h2>
 
                   <p className="text-xs text-slate-500">
                     Demo checkout — no real payment required
@@ -245,8 +234,8 @@ const CheckoutPage = () => {
                 </p>
 
                 <p className="mt-1 text-xs leading-5 text-indigo-600/70">
-                  This project uses a simulated checkout because
-                  MiniStore is a frontend-only application.
+                  This project uses a simulated checkout because MiniStore is a
+                  frontend-only application.
                 </p>
               </div>
             </div>
@@ -254,18 +243,13 @@ const CheckoutPage = () => {
 
           <aside>
             <div className="sticky top-24 rounded-2xl border border-slate-200 bg-white p-6">
-
               <h2 className="text-xl font-bold text-slate-900">
                 Order Summary
               </h2>
 
               <div className="mt-5 max-h-72 space-y-4 overflow-y-auto border-b border-slate-100 pb-5">
-
                 {cartItems.map((item) => (
-                  <div
-                    key={item.id}
-                    className="flex items-center gap-3"
-                  >
+                  <div key={item.id} className="flex items-center gap-3">
                     <div className="h-16 w-16 shrink-0 rounded-xl bg-slate-50">
                       <img
                         src={item.thumbnail}
@@ -289,15 +273,11 @@ const CheckoutPage = () => {
                     </p>
                   </div>
                 ))}
-
               </div>
 
               <div className="mt-5 space-y-3">
-
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">
-                    Items ({totalItems})
-                  </span>
+                  <span className="text-slate-500">Items ({totalItems})</span>
 
                   <span className="font-medium text-slate-700">
                     ${subtotal.toFixed(2)}
@@ -305,23 +285,16 @@ const CheckoutPage = () => {
                 </div>
 
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">
-                    Shipping
-                  </span>
+                  <span className="text-slate-500">Shipping</span>
 
-                  <span className="font-medium text-emerald-600">
-                    Free
-                  </span>
+                  <span className="font-medium text-emerald-600">Free</span>
                 </div>
-
               </div>
 
               <div className="my-5 border-t border-slate-100" />
 
               <div className="flex items-center justify-between">
-                <span className="font-bold text-slate-900">
-                  Total
-                </span>
+                <span className="font-bold text-slate-900">Total</span>
 
                 <span className="text-2xl font-bold text-indigo-600">
                   ${subtotal.toFixed(2)}
@@ -339,10 +312,8 @@ const CheckoutPage = () => {
               <p className="mt-3 text-center text-xs text-slate-400">
                 No real payment will be processed.
               </p>
-
             </div>
           </aside>
-
         </form>
       </div>
     </main>

@@ -13,21 +13,18 @@ import { NavLink } from "react-router";
 import useAuthHook from "../hooks/useAuthHook";
 
 const Login = () => {
-  const { register, handleSubmit, errors, LoginFormHandler } =
-    useAuthHook();
+  const { register, handleSubmit, errors, LoginFormHandler } = useAuthHook();
 
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <main className="relative flex min-h-[calc(100vh-72px)] items-center justify-center overflow-hidden bg-linear-to-br from-indigo-50 via-white to-violet-100 px-4 py-12">
-
       {/* background decorations */}
       <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl" />
       <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-violet-200/50 blur-3xl" />
 
       {/* login card */}
       <div className="relative w-full max-w-md rounded-3xl border border-indigo-100 bg-white/90 p-6 shadow-xl shadow-indigo-100/60 backdrop-blur sm:p-8">
-
         {/* logo */}
         <div className="mb-7 text-center">
           <NavLink
@@ -53,10 +50,7 @@ const Login = () => {
         </div>
 
         {/* form */}
-        <form
-          onSubmit={handleSubmit(LoginFormHandler)}
-          className="space-y-5"
-        >
+        <form onSubmit={handleSubmit(LoginFormHandler)} className="space-y-5">
           {/* Email */}
           <div>
             <label
@@ -133,7 +127,6 @@ const Login = () => {
                 }`}
                 {...register("password", {
                   required: "Password is required",
-                  
                 })}
               />
 
@@ -141,15 +134,9 @@ const Login = () => {
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 transition hover:text-indigo-600"
-                aria-label={
-                  showPassword ? "Hide password" : "Show password"
-                }
+                aria-label={showPassword ? "Hide password" : "Show password"}
               >
-                {showPassword ? (
-                  <EyeOff size={18} />
-                ) : (
-                  <Eye size={18} />
-                )}
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
             </div>
 
@@ -164,9 +151,7 @@ const Login = () => {
           <div className="flex items-center gap-2 rounded-xl bg-indigo-50 px-3 py-2.5 text-xs text-indigo-700">
             <ShieldCheck size={16} className="shrink-0" />
 
-            <span>
-              Your account information stays secure.
-            </span>
+            <span>Your account information stays secure.</span>
           </div>
 
           {/* Submit */}
@@ -176,7 +161,6 @@ const Login = () => {
           >
             Login
             <LogIn size={18} />
-            
           </button>
         </form>
 

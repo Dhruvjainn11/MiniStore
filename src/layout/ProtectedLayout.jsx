@@ -6,9 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const ProtectedLayout = () => {
-  const isLoggedIn = useSelector(
-    (state) => state.auth.isLoggedIn
-  );
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   if (!isLoggedIn) {
     return <Navigate to="/login" replace />;

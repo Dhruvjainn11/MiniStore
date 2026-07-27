@@ -151,7 +151,7 @@ const Navbar = () => {
             </NavLink>
           )}
         </div>
-          {/* mobile menu  */}
+        {/* mobile menu  */}
         <div className="flex items-center gap-1 md:hidden">
           <NavLink
             to="/wishlist"

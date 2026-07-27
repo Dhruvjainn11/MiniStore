@@ -11,6 +11,7 @@ import CartPage from "../pages/CartPage";
 import CheckoutPage from "../pages/CheckoutPage";
 import GuestLayout from "../layout/GuestLayout";
 import HomePage from "../pages/HomePage";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const AppRoutes = () => {
   const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const AppRoutes = () => {
         {
           path: "/wishlist",
           element: <WishlistPage />,
+        },
+        {
+          path:'*',
+          element:<NotFoundPage />
         },
 
         // Guest-only routes

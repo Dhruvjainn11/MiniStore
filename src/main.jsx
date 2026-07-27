@@ -6,12 +6,9 @@ import { store } from "./redux/store.js";
 import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 
-
-
 createRoot(document.getElementById("root")).render(
-    <Provider store={store}>
-        <AppRoutes />
-        <ToastContainer />
-    </Provider>
-
+  <Provider store={store}>
+    <AppRoutes />
+    <ToastContainer />
+  </Provider>,
 );

@@ -39,7 +39,6 @@ const ProductCard = ({ product }) => {
   };
   return (
     <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-100/60">
-   
       <div className="relative overflow-hidden bg-slate-50">
         <img
           src={product.thumbnail}

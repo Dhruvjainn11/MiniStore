@@ -73,7 +73,6 @@ const ProductPage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
-       
         <div className="mb-10">
           <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
             Our Collection
@@ -143,7 +142,7 @@ const ProductPage = () => {
             <option value="name">Name: A to Z</option>
           </select>
         </div>
-        
+
         {/* products */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sortedProducts.map((product) => (

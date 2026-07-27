@@ -21,21 +21,18 @@ import {
 const CartPage = () => {
   const dispatch = useDispatch();
 
-  const cartItems = useSelector(
-    (state) => state.cart.items
-  );
+  const cartItems = useSelector((state) => state.cart.items);
 
   // Total number of items
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
-    0
+    0,
   );
 
   // Total price
   const subtotal = cartItems.reduce(
-    (total, item) =>
-      total + item.price * item.quantity,
-    0
+    (total, item) => total + item.price * item.quantity,
+    0,
   );
 
   // Empty Cart
@@ -43,7 +40,6 @@ const CartPage = () => {
     return (
       <main className="flex min-h-150 items-center justify-center bg-slate-50 px-5 py-16">
         <div className="max-w-md text-center">
-
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-50 text-indigo-600">
             <ShoppingCart size={34} />
           </div>
@@ -53,9 +49,8 @@ const CartPage = () => {
           </h1>
 
           <p className="mt-3 text-sm leading-6 text-slate-500">
-            Looks like you haven't added anything to your
-            cart yet. Explore our products and find something
-            you like.
+            Looks like you haven't added anything to your cart yet. Explore our
+            products and find something you like.
           </p>
 
           <NavLink
@@ -73,7 +68,6 @@ const CartPage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10 lg:py-14">
-
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
@@ -85,8 +79,8 @@ const CartPage = () => {
             </h1>
 
             <p className="mt-2 text-sm text-slate-500">
-              You have {totalItems}{" "}
-              {totalItems === 1 ? "item" : "items"} in your cart.
+              You have {totalItems} {totalItems === 1 ? "item" : "items"} in
+              your cart.
             </p>
           </div>
 
@@ -100,14 +94,12 @@ const CartPage = () => {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
-
           <div className="space-y-4">
             {cartItems.map((item) => (
               <div
                 key={item.id}
                 className="relative flex flex-col gap-5 rounded-2xl border border-slate-200 bg-white p-4 sm:flex-row sm:items-center"
               >
-
                 <div className="flex h-32 w-full shrink-0 items-center justify-center rounded-xl bg-slate-50 sm:h-28 sm:w-28">
                   <img
                     src={item.thumbnail}
@@ -117,7 +109,6 @@ const CartPage = () => {
                 </div>
 
                 <div className="min-w-0 flex-1">
-
                   <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
                     {item.category}
                   </p>
@@ -131,15 +122,9 @@ const CartPage = () => {
                   </p>
 
                   <div className="mt-4 flex items-center gap-3">
-
                     <div className="flex items-center overflow-hidden rounded-xl border border-slate-200">
-
                       <button
-                        onClick={() =>
-                          dispatch(
-                            decreaseQuantity(item.id)
-                          )
-                        }
+                        onClick={() => dispatch(decreaseQuantity(item.id))}
                         disabled={item.quantity === 1}
                         className="flex h-9 w-9 items-center justify-center text-slate-500 transition hover:bg-indigo-50 hover:text-indigo-600 disabled:cursor-not-allowed disabled:opacity-30"
                       >
@@ -151,11 +136,7 @@ const CartPage = () => {
                       </span>
 
                       <button
-                        onClick={() =>
-                          dispatch(
-                            increaseQuantity(item.id)
-                          )
-                        }
+                        onClick={() => dispatch(increaseQuantity(item.id))}
                         className="flex h-9 w-9 items-center justify-center text-slate-500 transition hover:bg-indigo-50 hover:text-indigo-600"
                       >
                         <Plus size={15} />
@@ -169,9 +150,7 @@ const CartPage = () => {
                 </div>
 
                 <button
-                  onClick={() =>
-                    dispatch(removeFromCart(item.id))
-                  }
+                  onClick={() => dispatch(removeFromCart(item.id))}
                   className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-lg text-slate-400 transition hover:bg-red-50 hover:text-red-500"
                   aria-label="Remove product"
                 >
@@ -183,17 +162,13 @@ const CartPage = () => {
 
           <div>
             <div className="sticky top-24 rounded-2xl border border-slate-200 bg-white p-6">
-
               <h2 className="text-xl font-bold text-slate-900">
                 Order Summary
               </h2>
 
               <div className="mt-6 space-y-4 border-b border-slate-100 pb-5">
-
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">
-                    Items ({totalItems})
-                  </span>
+                  <span className="text-slate-500">Items ({totalItems})</span>
 
                   <span className="font-medium text-slate-800">
                     ${subtotal.toFixed(2)}
@@ -201,25 +176,17 @@ const CartPage = () => {
                 </div>
 
                 <div className="flex justify-between text-sm">
-                  <span className="text-slate-500">
-                    Shipping
-                  </span>
+                  <span className="text-slate-500">Shipping</span>
 
-                  <span className="font-medium text-emerald-600">
-                    Free
-                  </span>
+                  <span className="font-medium text-emerald-600">Free</span>
                 </div>
               </div>
 
               <div className="flex items-center justify-between py-5">
                 <div>
-                  <p className="font-semibold text-slate-900">
-                    Total
-                  </p>
+                  <p className="font-semibold text-slate-900">Total</p>
 
-                  <p className="text-xs text-slate-400">
-                    Including all items
-                  </p>
+                  <p className="text-xs text-slate-400">Including all items</p>
                 </div>
 
                 <p className="text-2xl font-bold text-indigo-600">
@@ -243,7 +210,6 @@ const CartPage = () => {
               </NavLink>
             </div>
           </div>
-
         </div>
       </div>
     </main>

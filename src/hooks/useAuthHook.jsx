@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
-import { useDispatch  } from "react-redux";
+import { useDispatch } from "react-redux";
 import { login } from "../features/auth/authSlice";
 import { toast } from "react-toastify";
 
@@ -45,7 +45,6 @@ const useAuthHook = () => {
     }
 
     reset();
-    
   };
 
   //   -------------------------------------------------------------------------------
@@ -61,10 +60,9 @@ const useAuthHook = () => {
     setRegisteredUser([...registeredUser, data]);
 
     reset();
-    
+
     toast.success("Registration successful");
     navigate("/login");
-
   };
 
   return {

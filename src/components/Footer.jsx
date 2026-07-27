@@ -1,11 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
-import {
-  Store,
-  Heart,
-  ShoppingCart,
-  Mail,
-} from "lucide-react";
+import { Store, Heart, ShoppingCart, Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
@@ -14,14 +9,9 @@ const Footer = () => {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
-
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-
           <div className="sm:col-span-2 lg:col-span-1">
-            <NavLink
-              to="/"
-              className="inline-flex items-center gap-2.5"
-            >
+            <NavLink to="/" className="inline-flex items-center gap-2.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-white">
                 <Store size={21} />
               </div>
@@ -32,25 +22,27 @@ const Footer = () => {
             </NavLink>
 
             <p className="mt-4 max-w-xs text-sm leading-6 text-slate-500">
-              A simple and modern shopping experience built to make
-              discovering your favorite products easy.
+              A simple and modern shopping experience built to make discovering
+              your favorite products easy.
             </p>
 
             <div className="mt-5 flex gap-2">
               <a
-                href="#"
+                href="https://github.com/Dhruvjainn11"
+                target="_blank"
                 aria-label="Github"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 text-slate-500 transition hover:bg-indigo-50 hover:text-indigo-600"
               >
-                <FaGithub  size={18} />
+                <FaGithub size={18} />
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/dhruv-jain-dev/"
                 aria-label="LinkedIn"
+                target="_blank"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 text-slate-500 transition hover:bg-indigo-50 hover:text-indigo-600"
               >
-                <FaLinkedinIn  size={18} />
+                <FaLinkedinIn size={18} />
               </a>
 
               <a
@@ -58,15 +50,13 @@ const Footer = () => {
                 aria-label="Instagram"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 text-slate-500 transition hover:bg-indigo-50 hover:text-indigo-600"
               >
-                <FaInstagram  size={18} />
+                <FaInstagram size={18} />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="font-semibold text-slate-900">
-              Shop
-            </h3>
+            <h3 className="font-semibold text-slate-900">Shop</h3>
 
             <div className="mt-4 flex flex-col gap-3 text-sm text-slate-500">
               <NavLink
@@ -94,16 +84,11 @@ const Footer = () => {
             </div>
           </div>
 
-         
-
           <div>
-            <h3 className="font-semibold text-slate-900">
-              Contact
-            </h3>
+            <h3 className="font-semibold text-slate-900">Contact</h3>
 
             <p className="mt-4 text-sm leading-6 text-slate-500">
-              Have a question about MiniStore? We'd love to hear
-              from you.
+              Have a question about MiniStore? We'd love to hear from you.
             </p>
 
             <a
@@ -117,13 +102,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 text-center text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
-          <p>
-            © {currentYear} MiniStore. All rights reserved.
-          </p>
+          <p>© {currentYear} MiniStore. All rights reserved.</p>
 
-          <p>
-            Built with React & Redux Toolkit
-          </p>
+          <p>Built with React & Redux Toolkit</p>
         </div>
       </div>
     </footer>
