@@ -26,14 +26,11 @@ const Register = () => {
   return (
     <main className="relative flex min-h-[calc(100vh-72px)] items-center justify-center overflow-hidden bg-linear-to-br from-indigo-50 via-white to-violet-100 px-4 py-12">
 
-      {/* Background Decorations */}
       <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl" />
       <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-violet-200/50 blur-3xl" />
 
-      {/* Register Card */}
       <div className="relative w-full max-w-md rounded-3xl border border-indigo-100 bg-white/90 p-6 shadow-xl shadow-indigo-100/60 backdrop-blur sm:p-8">
 
-        {/* Header */}
         <div className="mb-7 text-center">
           <NavLink
             to="/"
@@ -63,7 +60,7 @@ const Register = () => {
           className="space-y-5"
         >
 
-          {/* Name */}
+          {/* name */}
           <div>
             <label
               htmlFor="name"
@@ -104,7 +101,6 @@ const Register = () => {
             )}
           </div>
 
-          {/* Email */}
           <div>
             <label
               htmlFor="email"
@@ -145,7 +141,6 @@ const Register = () => {
             )}
           </div>
 
-          {/* Password */}
           <div>
             <label
               htmlFor="password"
@@ -201,7 +196,6 @@ const Register = () => {
             )}
           </div>
 
-          {/* Info */}
           <div className="flex items-center gap-2 rounded-xl bg-indigo-50 px-3 py-2.5 text-xs text-indigo-700">
             <ShieldCheck size={16} className="shrink-0" />
 
@@ -210,7 +204,6 @@ const Register = () => {
             </span>
           </div>
 
-          {/* Submit */}
           <button
             type="submit"
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 text-sm font-semibold text-white shadow-md shadow-indigo-200 transition duration-200 hover:bg-indigo-700 active:scale-[0.99]"
@@ -221,7 +214,6 @@ const Register = () => {
           </button>
         </form>
 
-        {/* Login */}
         <div className="mt-7 border-t border-slate-100 pt-6 text-center">
           <p className="text-sm text-slate-500">
             Already have an account?{" "}

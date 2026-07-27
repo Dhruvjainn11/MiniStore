@@ -73,7 +73,7 @@ const ProductPage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
-        {/* Header */}
+       
         <div className="mb-10">
           <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
             Our Collection
@@ -89,7 +89,6 @@ const ProductPage = () => {
           </p>
         </div>
 
-        {/* Product Count */}
         <div className="mb-5 flex items-center justify-between">
           <p className="text-sm text-slate-500">
             Showing{" "}
@@ -118,7 +117,7 @@ const ProductPage = () => {
             />
           </div>
 
-          {/* Category */}
+          {/* category */}
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -131,7 +130,7 @@ const ProductPage = () => {
             ))}
           </select>
 
-          {/* Sort */}
+          {/* sort */}
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
@@ -145,7 +144,7 @@ const ProductPage = () => {
           </select>
         </div>
         
-        {/* Products */}
+        {/* products */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sortedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />

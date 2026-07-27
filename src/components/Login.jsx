@@ -21,14 +21,14 @@ const Login = () => {
   return (
     <main className="relative flex min-h-[calc(100vh-72px)] items-center justify-center overflow-hidden bg-linear-to-br from-indigo-50 via-white to-violet-100 px-4 py-12">
 
-      {/* Background Decorations */}
+      {/* background decorations */}
       <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl" />
       <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-violet-200/50 blur-3xl" />
 
-      {/* Login Card */}
+      {/* login card */}
       <div className="relative w-full max-w-md rounded-3xl border border-indigo-100 bg-white/90 p-6 shadow-xl shadow-indigo-100/60 backdrop-blur sm:p-8">
 
-        {/* Logo */}
+        {/* logo */}
         <div className="mb-7 text-center">
           <NavLink
             to="/"
@@ -52,7 +52,7 @@ const Login = () => {
           </p>
         </div>
 
-        {/* Form */}
+        {/* form */}
         <form
           onSubmit={handleSubmit(LoginFormHandler)}
           className="space-y-5"
@@ -133,10 +133,7 @@ const Login = () => {
                 }`}
                 {...register("password", {
                   required: "Password is required",
-                  minLength: {
-                    value: 6,
-                    message: "Password must be at least 6 characters",
-                  },
+                  
                 })}
               />
 
@@ -183,7 +180,7 @@ const Login = () => {
           </button>
         </form>
 
-        {/* Register */}
+        {/* register */}
         <div className="mt-7 border-t border-slate-100 pt-6 text-center">
           <p className="text-sm text-slate-500">
             Don't have an account?{" "}

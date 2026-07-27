@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../features/auth/authSlice";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,6 +37,7 @@ const Navbar = () => {
     dispatch(logout());
     localStorage.removeItem("loggedInUser");
     setMenuOpen(false);
+    toast.success("Logout successful");
   };
 
   return (
@@ -56,7 +58,7 @@ const Navbar = () => {
           </span>
         </NavLink>
 
-        {/* Desktop Navigation */}
+        {/* desktop navigation */}
         <div className="hidden items-center gap-8 md:flex">
           <NavLink to="/" className={navClass}>
             Home
@@ -67,9 +69,8 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Desktop Actions */}
         <div className="hidden items-center gap-2 md:flex">
-          {/* Wishlist */}
+          {/* wishlist */}
           <NavLink
             to="/wishlist"
             className={({ isActive }) =>
@@ -113,10 +114,8 @@ const Navbar = () => {
 
           <div className="mx-2 h-7 w-px bg-slate-200" />
 
-          {/* Authentication */}
           {isLoggedIn ? (
             <div className="flex items-center gap-3">
-              {/* User */}
               <div className="flex items-center gap-2 rounded-xl bg-indigo-50 px-3 py-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
                   <UserRound size={17} />
@@ -152,8 +151,7 @@ const Navbar = () => {
             </NavLink>
           )}
         </div>
-
-        {/* Mobile Right Side */}
+          {/* mobile menu  */}
         <div className="flex items-center gap-1 md:hidden">
           <NavLink
             to="/wishlist"
@@ -229,7 +227,6 @@ const Navbar = () => {
 
             {isLoggedIn ? (
               <>
-                {/* Logged In User */}
                 <div className="flex items-center gap-3 rounded-xl bg-indigo-50 p-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 text-indigo-600">
                     <UserRound size={19} />

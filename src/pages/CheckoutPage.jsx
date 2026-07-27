@@ -92,7 +92,6 @@ const CheckoutPage = () => {
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10 lg:py-14">
 
-        {/* Header */}
         <div className="mb-8">
           <NavLink
             to="/cart"
@@ -120,7 +119,6 @@ const CheckoutPage = () => {
           className="grid gap-8 lg:grid-cols-[1fr_380px]"
         >
 
-          {/* Shipping Form */}
           <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-7">
 
             <div className="mb-6 flex items-center gap-3">
@@ -224,7 +222,6 @@ const CheckoutPage = () => {
 
             </div>
 
-            {/* Demo Payment */}
             <div className="mt-8 border-t border-slate-100 pt-7">
               <div className="mb-4 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
@@ -255,7 +252,6 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          {/* Order Summary */}
           <aside>
             <div className="sticky top-24 rounded-2xl border border-slate-200 bg-white p-6">
 
@@ -263,7 +259,6 @@ const CheckoutPage = () => {
                 Order Summary
               </h2>
 
-              {/* Products */}
               <div className="mt-5 max-h-72 space-y-4 overflow-y-auto border-b border-slate-100 pb-5">
 
                 {cartItems.map((item) => (
@@ -297,7 +292,6 @@ const CheckoutPage = () => {
 
               </div>
 
-              {/* Price */}
               <div className="mt-5 space-y-3">
 
                 <div className="flex justify-between text-sm">
@@ -355,7 +349,6 @@ const CheckoutPage = () => {
   );
 };
 
-/* Reusable Input */
 const InputField = ({
   label,
   name,

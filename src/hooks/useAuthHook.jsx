@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { useDispatch  } from "react-redux";
 import { login } from "../features/auth/authSlice";
+import { toast } from "react-toastify";
 
 const useAuthHook = () => {
   const {
@@ -37,12 +38,14 @@ const useAuthHook = () => {
       localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
 
       setLoggedInUser(foundUser);
+      navigate("/");
+      toast.success("Login successful");
     } else {
-      alert("Invalid email or password");
+      toast.error("Invalid email or password");
     }
 
     reset();
-    navigate("/");
+    
   };
 
   //   -------------------------------------------------------------------------------
@@ -58,10 +61,10 @@ const useAuthHook = () => {
     setRegisteredUser([...registeredUser, data]);
 
     reset();
+    
+    toast.success("Registration successful");
+    navigate("/login");
 
-    // Later:
-    // Save user to localStorage
-    // dispatch(registerUser(data))
   };
 
   return {

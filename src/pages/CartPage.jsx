@@ -74,7 +74,6 @@ const CartPage = () => {
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10 lg:py-14">
 
-        {/* Header */}
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
@@ -102,7 +101,6 @@ const CartPage = () => {
 
         <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
 
-          {/* Cart Items */}
           <div className="space-y-4">
             {cartItems.map((item) => (
               <div
@@ -110,7 +108,6 @@ const CartPage = () => {
                 className="relative flex flex-col gap-5 rounded-2xl border border-slate-200 bg-white p-4 sm:flex-row sm:items-center"
               >
 
-                {/* Product Image */}
                 <div className="flex h-32 w-full shrink-0 items-center justify-center rounded-xl bg-slate-50 sm:h-28 sm:w-28">
                   <img
                     src={item.thumbnail}
@@ -119,7 +116,6 @@ const CartPage = () => {
                   />
                 </div>
 
-                {/* Product Information */}
                 <div className="min-w-0 flex-1">
 
                   <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
@@ -134,7 +130,6 @@ const CartPage = () => {
                     ${item.price.toFixed(2)}
                   </p>
 
-                  {/* Quantity */}
                   <div className="mt-4 flex items-center gap-3">
 
                     <div className="flex items-center overflow-hidden rounded-xl border border-slate-200">
@@ -173,7 +168,6 @@ const CartPage = () => {
                   </div>
                 </div>
 
-                {/* Remove */}
                 <button
                   onClick={() =>
                     dispatch(removeFromCart(item.id))
@@ -187,7 +181,6 @@ const CartPage = () => {
             ))}
           </div>
 
-          {/* Order Summary */}
           <div>
             <div className="sticky top-24 rounded-2xl border border-slate-200 bg-white p-6">
 
@@ -218,7 +211,6 @@ const CartPage = () => {
                 </div>
               </div>
 
-              {/* Total */}
               <div className="flex items-center justify-between py-5">
                 <div>
                   <p className="font-semibold text-slate-900">
@@ -235,7 +227,6 @@ const CartPage = () => {
                 </p>
               </div>
 
-              {/* Checkout */}
               <NavLink
                 to="/checkout"
                 className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700"

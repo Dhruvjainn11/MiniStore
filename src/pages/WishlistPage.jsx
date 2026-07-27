@@ -68,7 +68,7 @@ const WishlistPage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10 lg:py-14">
-        {/* Header */}
+        
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-rose-500">
@@ -88,7 +88,6 @@ const WishlistPage = () => {
             </p>
           </div>
 
-          {/* Clear Wishlist */}
           <button
             onClick={() => dispatch(clearWishlist())}
             className="flex w-fit items-center gap-2 text-sm font-medium text-red-500 transition hover:text-red-600"
@@ -98,7 +97,6 @@ const WishlistPage = () => {
           </button>
         </div>
 
-        {/* Wishlist Grid  */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {wishlistItems.map((product) => {
             const inCart = isProductInCart(product.id);
@@ -108,7 +106,6 @@ const WishlistPage = () => {
                 key={product.id}
                 className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-100/50"
               >
-                {/* Product Image */}
                 <div className="relative overflow-hidden bg-slate-50">
                   <img
                     src={product.thumbnail}
@@ -116,7 +113,6 @@ const WishlistPage = () => {
                     className="h-56 w-full object-contain p-5 transition duration-300 group-hover:scale-105"
                   />
 
-                  {/* Remove Wishlist */}
                   <button
                     onClick={() => dispatch(removeFromWishlist(product.id))}
                     className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-rose-500 shadow-sm transition hover:bg-rose-50"
@@ -126,24 +122,19 @@ const WishlistPage = () => {
                   </button>
                 </div>
 
-                {/* Product Info */}
                 <div className="p-5">
-                  {/* Category */}
                   <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
                     {product.category}
                   </p>
 
-                  {/* Title */}
                   <h2 className="mt-2 line-clamp-1 text-base font-semibold text-slate-900">
                     {product.title}
                   </h2>
 
-                  {/* Description */}
                   <p className="mt-2 line-clamp-2 min-h-10 text-sm leading-5 text-slate-500">
                     {product.description}
                   </p>
 
-                  {/* Rating */}
                   <div className="mt-3 flex items-center gap-1.5">
                     <Star size={16} className="fill-amber-400 text-amber-400" />
 
@@ -152,7 +143,6 @@ const WishlistPage = () => {
                     </span>
                   </div>
 
-                  {/* Price */}
                   <div className="mt-4 flex items-center justify-between">
                     <p className="text-xl font-bold text-slate-900">
                       ${product.price}

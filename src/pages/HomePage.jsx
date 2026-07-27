@@ -58,9 +58,8 @@ const HomePage = () => {
   return (
     <main className="min-h-screen bg-slate-50">
 
-      {/* ================= HERO ================= */}
       <section className="relative overflow-hidden bg-linear-to-br from-indigo-50 via-white to-violet-100">
-        {/* Decorative backgrounds */}
+        
         <div className="absolute -left-20 top-20 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-violet-200/50 blur-3xl" />
 
@@ -103,7 +102,7 @@ const HomePage = () => {
               </NavLink>
             </div>
 
-            {/* Small Stats */}
+            {/* Stats */}
             <div className="mt-10 flex flex-wrap justify-center gap-8 border-t border-indigo-100 pt-7 lg:justify-start">
               <div>
                 <p className="text-2xl font-bold text-slate-900">100+</p>
@@ -122,7 +121,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Hero Visual */}
+          {/* Hero*/}
           <div className="relative mx-auto w-full max-w-lg">
             <div className="rounded-4xl border border-indigo-100 bg-white/80 p-5 shadow-2xl shadow-indigo-200/50 backdrop-blur">
 
@@ -199,7 +198,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ================= CATEGORIES ================= */}
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="mb-10 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-indigo-600">
@@ -251,7 +249,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ================= PROMO ================= */}
       <section className="px-5 pb-16 sm:px-8 lg:px-10 lg:pb-20">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-linear-to-r from-indigo-600 to-violet-600">
           <div className="flex flex-col items-center justify-between gap-8 px-6 py-12 text-center sm:px-10 lg:flex-row lg:px-14 lg:text-left">
@@ -283,7 +280,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ================= BENEFITS ================= */}
       <section className="border-t border-slate-200 bg-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 sm:px-8 md:grid-cols-3 lg:px-10">
           {features.map((feature) => {

@@ -15,10 +15,8 @@ const Footer = () => {
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
 
-        {/* Main Footer */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
-          {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <NavLink
               to="/"
@@ -38,7 +36,6 @@ const Footer = () => {
               discovering your favorite products easy.
             </p>
 
-            {/* Social Icons */}
             <div className="mt-5 flex gap-2">
               <a
                 href="#"
@@ -66,7 +63,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Shop */}
           <div>
             <h3 className="font-semibold text-slate-900">
               Shop
@@ -100,7 +96,6 @@ const Footer = () => {
 
          
 
-          {/* Contact */}
           <div>
             <h3 className="font-semibold text-slate-900">
               Contact
@@ -121,7 +116,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 text-center text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>
             © {currentYear} MiniStore. All rights reserved.
